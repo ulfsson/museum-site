@@ -2,7 +2,7 @@ body.mainpage {
     background-color: #292929;
     background:
         linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)),
-        url("/images/museum-background.jpg");
+        url("../images/museum-background.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: lightgray;
