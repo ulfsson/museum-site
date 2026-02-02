@@ -1,0 +1,56 @@
+body.mainpage {
+    background-color: #292929;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)),
+        url("/images/museum-background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: lightgray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2.mainpage {
+    text-align: center;
+}
+
+button.mainpage {
+    background-color: burlywood;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 7px;
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+div.header {
+    backdrop-filter: brightness(60%) blur(10px);
+    text-align: center;
+    padding: 15px;
+    padding-bottom: 35px;
+    margin: 0;
+    border: 1px solid gray;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 5px black;
+}
+
+div.welcome {
+    color: lightgray;
+    backdrop-filter: brightness(60%) blur(10px);
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 0px 5px black;
+}
+
+div.footer {
+    color: lightgray;
+    backdrop-filter: brightness(60%) blur(10px);
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 0px 5px black;
+    font-size: small;
+    text-align: center;
+}
