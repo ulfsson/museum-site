@@ -87,6 +87,57 @@ div.collection-navigation {
     text-align: center;
 }
 
+div.staff-persona {
+    color: lightgray;
+    backdrop-filter: brightness(60%) blur(10px);
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;
+}
+
+h3.staff-bio {
+    margin-bottom: -1em;
+}
+
+h4.staff-bio {
+    margin-bottom: -0.7em;
+}
+
+div.staff-container {
+    display: grid;
+    padding: 25px 250px 25px 250px;
+    grid-template-columns: auto auto auto;
+    column-gap: 50px;
+    color: lightgray;
+    backdrop-filter: brightness(60%) blur(10px);
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;
+}
+
+.staff-container div {
+    /* border: 1px solid white; */
+    align-content: center;
+}
+
+.staff-container img {
+    border-radius: 10px;
+}
+
+.staff-container h2 {
+    margin-top: 0;
+    margin-bottom: -0.75em;
+}
+
+.staff-container h4 {
+    margin-bottom: -0.7em;
+}
+
+.staff-container hr {
+    border: 1px solid darkgray;
+    box-shadow: 0px 2px 0px black;
+}
+
 div.footer {
     color: lightgray;
     backdrop-filter: brightness(60%) blur(10px);
