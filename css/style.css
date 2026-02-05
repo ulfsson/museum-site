@@ -122,6 +122,7 @@ div.staff-container {
 
 .staff-container img {
     border-radius: 10px;
+    height: 350px;
 }
 
 .staff-container h2 {
@@ -136,6 +137,11 @@ div.staff-container {
 .staff-container hr {
     border: 1px solid darkgray;
     box-shadow: 0px 2px 0px black;
+}
+
+.quote {
+    font-size: smaller;
+    float: right;
 }
 
 div.footer {
