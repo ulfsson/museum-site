@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <meta name="author" content="Eik Ulfsson">
+  <meta name="robots" content="noindex, nofollow">
+</head>
+
+<body class="mainpage">
+  <div class="header">
+    <h1>Museum of Odds 'n' Ends</h1>
+    <button onclick="location.href='/index.html'" class="navigation">Home</button>
+    <button onclick="location.href='/html/staff.html'" class="navigation">Staff</button>
+    <button onclick="location.href='/html/collections.html'" class="navigation">Collections</button>
+    <button onclick="location.href='/html/shop.html'" class="navigation">Shop</button>
+  </div>
+  <br>
+
+  <div class="shop-container">
+
+    <!-- BEGIN SINGLE ITEM BLOCK-->
+    <div class="souvenir-item" data-id="item001">
+      <img src="/images/collections/chamber-soup-bowl.jpg" alt="Metal Soup Bowl" onclick="openModal(this)" />
+      <h3>Metal Soup Bowl</h3>
+      <p>This fully functional soup bowl is a great gift for those who don't like to use a microwave. It is made from
+        stainless steel and weathered to look like it came straight from the middle ages. Its large size can hold up to
+        two liters of any soup and the stylish appearance will have guests talking.</p>
+      <p><strong>Price:</strong> $39.99</p>
+      <button onclick="addToCart('item001')">Add Metal Soup Bowl to Cart</button>
+    </div>
+    <!-- END SINGLE ITEM BLOCK -->
+
+    <!-- BEGIN SINGLE ITEM BLOCK-->
+    <div class="souvenir-item" data-id="item001">
+      <img src="/images/collections/drinking-horn.jpg" alt="Drinking Horn" onclick="openModal(this)" />
+      <h3>Drinking Horn</h3>
+      <p>Made from BPA-free materials, this drinking horn holds up to 1 liter of any drink of your choice. Microwaveable
+        and dishwasher safe. Buy two and receive a free head strap so you can pretend to be a bull in a China shop!</p>
+      <p><strong>Price:</strong> $29.99</p>
+      <button onclick="addToCart('item001')">Add Drinking Horn to Cart</button>
+    </div>
+    <!-- END SINGLE ITEM BLOCK -->
+
+    <!-- BEGIN SINGLE ITEM BLOCK-->
+    <div class="souvenir-item" data-id="item001">
+      <img src="/images/collections/stone-disc.jpg" alt="Stone Disc" onclick="openModal(this)" />
+      <h3>Stone Disc</h3>
+      <p>A real stone disc! Use it to grind your own flour or the bones of your enemies. Also useful as a doorstop, paperweight, trebuchet ammunition, garden decoration, spare tire, serving tray, or salad garnish.</p>
+      <p><strong>Price:</strong> $69.99</p>
+      <button onclick="addToCart('item001')">Add Stone Disc to Cart</button>
+    </div>
+    <!-- END SINGLE ITEM BLOCK -->
+
+    <!-- BEGIN SINGLE ITEM BLOCK-->
+    <div class="souvenir-item" data-id="item001">
+      <img src="/images/collections/typewriter-gnmyost.jpg" alt="Typewriter" onclick="openModal(this)" />
+      <h3>Typewriter</h3>
+      <p>Back by popular demand, a working replica of the typewriter with just 7 letters and one punctuation mark! Type all of your favorite words: GM STONY, MSG TONY, or GYM SNOT. The possibilities are endless! Write the novel of your dreams and become a well-renouned author. Just think of us when you write your foreword!</p>
+      <p><strong>Price:</strong> $129.99</p>
+      <button onclick="addToCart('item001')">Add Typewriter to Cart</button>
+    </div>
+    <!-- END SINGLE ITEM BLOCK -->
+
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+      <img id="modal-image" src="" alt="">
+    </div>
+  </div>
+
+  <br>
+  <div class="footer">
+    This is a fictitious website created purely for academic purposes.<br>The contents of this site was conceived and
+    created entirely by at least one human.<br>
+    <hr>
+    Background photo courtesy of Smithsonian Open Access.<br>
+    Photgraphs from Pexels courtesy of: Katerina Holmes, Gustavo Fring, and Max Fischer.
+  </div>
+
+  <script>
+    function addToCart(itemId) {
+      alert("Added " + itemId + " to cart (functionality to come)");
+      // Future: Push to cart array
+    }
+
+    function openModal(imgElement) {
+      const modal = document.getElementById("modal");
+      const modalImage = document.getElementById("modal-image");
+      modalImage.src = imgElement.src;
+      modalImage.alt = imgElement.alt;
+      modal.style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+
+    // Optional: Close modal on outside click
+    window.onclick = function (event) {
+      const modal = document.getElementById("modal");
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+  </script>
+</body>
+
+</html>
