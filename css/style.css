@@ -57,6 +57,17 @@ button.navigation {
     padding-left: 10px;
 }
 
+header {
+    backdrop-filter: brightness(60%) blur(10px);
+    text-align: center;
+    padding: 15px;
+    padding-bottom: 35px;
+    margin: 0 0 15px 0;
+    border: 1px solid gray;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 5px black;
+}
+
 div.header {
     backdrop-filter: brightness(60%) blur(10px);
     text-align: center;
@@ -169,11 +180,6 @@ div.collection-container {
 .collection-container div.cinfo {
     grid-area: cinfo;
     text-align: left;
-    /* border: 1px solid blue; */
-}
-
-.collection-container div {
-    /* border: 1px solid white; */
 }
 
 .collection-container img {
@@ -294,4 +300,52 @@ div.footer hr {
     font-size: 1.2rem;
     cursor: pointer;
     color: #444;
+}
+
+
+
+/* Cart Summary Page */
+
+table.cart, table.cart th, table.cart td {
+    width: 100%;
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 16px;
+    background-color: #292929;
+    color: lightgray;
+
+    padding: 25px 50px 25px 50px;
+    padding-bottom: 35px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;
+}
+
+.controls {
+    margin: 8px 0 12px;
+}
+
+.empty {
+    padding: 12px;
+    border: 1px dashed #666;
+    font-style: italic;
+}
+
+pre#summary {
+    background: #f8f8f8;
+    padding: 12px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 8px;
 }
