@@ -362,3 +362,11 @@ pre#summary {
     display: flex;
     gap: 8px;
 }
+
+.actions a:link {
+    color: green;
+}
+
+.actions a:visited {
+    color: green;
+}
