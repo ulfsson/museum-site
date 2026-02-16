@@ -140,31 +140,55 @@
         cartTable = "";
 
         cartTable += `<table class="cart"><tr><th>Item</th><th>Qty</th><th>Unit Price</th><th>Line Total</th><th>Remove</th></tr>`;
-        
+
         let memberDiscount = 0;
 
         if (isMember) {
           memberDiscount = 0.15;
         }
 
+        let subTotal = 0;
+
         for (itemIndex in customerCart) {
           let item = customerCart[itemIndex]
           let itemName = item.name;
           let itemCount = item.qty;
           let itemPrice = item.unitPrice;
-          let totalCost = ((itemPrice * itemCount) - (itemPrice * itemCount * memberDiscount)).toFixed(2);
+          let totalCost = itemPrice * itemCount;
           cartTable += `<tr>
-        <td>${itemName}</td>
-        <td>${itemCount}</td>
-        <td>${itemPrice}</td>
-        <td>${totalCost}</td>
-        <td><button>Remove</button></td>
-        </tr>`;
+            <td><img src="${item.image}"> ${itemName}</td>
+            <td>${itemCount}</td>
+            <td>${money(itemPrice)}</td>
+            <td>${money(totalCost)}</td>
+            <td><button onClick="removeItem('${item.id}')">Remove</button></td>
+            </tr>
+            `;
+          
+          subTotal += Number(totalCost);
+
         }
 
         cartTable += "</table>"
+        let volumeDiscount = -subTotal * volumeRate(subTotal);
+        let totalMemberDiscount = -subTotal * memberDiscount;
+        let taxableTotal = volumeDiscount + totalMemberDiscount + subTotal + SHIPPING_RATE;
+        let taxAmount = taxableTotal * TAX_RATE;
+        let invoiceTotal = taxableTotal + taxAmount;
+
+
+        cartSummary = `
+          Subtotal of Item Totals: <span class="summaryTotal">${money(subTotal)}</span>
+          Volume Discount: <span class="summaryTotal">${money(volumeDiscount)}</span>
+          Member Discount: <span class="summaryTotal">${money(totalMemberDiscount)}</span>
+          Shipping: <span class="summaryTotal">${money(SHIPPING_RATE)}</span>
+          Subtotal (Taxable): <span class="summaryTotal">${money(taxableTotal)}</span>
+          Tax Rate: <span class="summaryTotal">${money(TAX_RATE)}</span>
+          Tax Amount: <span class="summaryTotal">${money(taxAmount)}</span>
+          Invoice Total: <span class="summaryTotal">${money(invoiceTotal)}</span>
+        `;
+
         summaryPre.hidden = false;
-        
+
       }
       // TODO: STUDENT IMPLEMENTATION
       // For now, show a placeholder so the page isn't blank.

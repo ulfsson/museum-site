@@ -306,12 +306,21 @@ div.footer hr {
 
 /* Cart Summary Page */
 
+table.cart {
+     width: 100%;
+     border-collapse: collapse;
+}
+
 table.cart, table.cart th, table.cart td {
-    width: 100%;
     border: 1px solid white;
-    border-collapse: collapse;
     padding: 10px;
     text-align: center;
+    vertical-align: middle;
+}
+
+table.cart td img {
+    vertical-align: middle;
+    height: 30px;
 }
 
 main {
@@ -339,9 +348,13 @@ main {
 }
 
 pre#summary {
-    background: #f8f8f8;
     padding: 12px;
+    border: 1px solid gray;
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.summaryTotal {
+    float: right;
 }
 
 .actions {
